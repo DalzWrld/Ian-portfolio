@@ -4,6 +4,77 @@
 @import "@fontsource-variable/inter";
 @import "@fontsource-variable/playfair-display";
 
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", Arial, sans-serif;
+  --font-decorative: "Cinzel Decorative", Georgia, serif;
+  --color-forest: #071a14;
+  --color-forest-soft: #0d241c;
+  --color-gold: #c9a34e;
+  --color-gold-soft: #e1c47a;
+  --color-gold-dark: #8c6c27;
+  --color-cream: #f7f3e8;
+  --color-ink: #171a17;
+}
+
+:root {
+  font-family: "Inter", Arial, sans-serif;
+  color: #171a17;
+  background: #f7f3e8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: #f7f3e8; }
+::selection { background: rgba(201, 163, 78, 0.28); }
+a { transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, transform 180ms ease; }
+
+@utility eyebrow {
+  @apply text-[10px] font-medium uppercase tracking-[0.2em];
+}
+
+@utility section-light {
+  @apply bg-cream text-ink;
+}
+
+@utility nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -7px;
+  height: 1px;
+  background: #c9a34e;
+  transition: right 220ms ease;
+}
+.nav-link:hover::after { right: 0; }
+
+.input {
+  width: 100%;
+  border: 1px solid rgba(23, 26, 23, 0.12);
+  background: white;
+  padding: 0.9rem 1rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+.input:focus {
+  border-color: rgba(201, 163, 78, 0.75);
+  box-shadow: 0 0 0 3px rgba(201, 163, 78, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
