@@ -31,4 +31,21 @@ export const projects = [
       outcome: "A deployed capstone project demonstrating full stack collaboration, JWT-based auth, and role-based access across a real team codebase. Some features (including payment integration) remain unfinished, as noted honestly in the repo.",
     },
   },
+  {
+    slug: "plantsy",
+    image: "",
+    category: "Frontend",
+    title: "Plantsy",
+    description: "An e-commerce web app for plant lovers to discover and shop their favorite indoor plants.",
+    stack: ["React", "TailwindCSS", "REST API"],
+    status: "Frontend project",
+    link: "https://react-plantshop.vercel.app/",
+    repo: "https://github.com/DalzWrld/react-plantshop",
+    details: {
+      challenge: "Make product discovery feel calm and visual without sacrificing useful shopping interactions.",
+      approach:
+        "Use reusable product cards, filtering patterns and clear hierarchy to keep browsing effortless.",
+      outcome: "A polished frontend project demonstrating component composition and responsive design.",
+    },
+  },
 ]
