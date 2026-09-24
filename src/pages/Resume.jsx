@@ -72,6 +72,48 @@ export default function Resume() {
           </Reveal>
         </div>
       </section>
+
+      {/* WORK HISTORY */}
+      <section className="bg-forest px-6 py-24 text-cream">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <SectionHeading number="03" label="Work History" inverse />
+            <h2 className="font-display text-3xl leading-snug sm:text-4xl">
+              Where I've <em className="italic text-gold">put it to use.</em>
+            </h2>
+            <p className="mt-4 max-w-xl text-cream/60">
+              Below you'll find a summary of my experience so far.{" "}
+              <span className="no-print">
+                You can also{" "}
+                <button onClick={() => window.print()} className="underline text-gold hover:text-gold-soft">
+                  download my resume
+                </button>
+                .
+              </span>
+            </p>
+
+            <ol className="mt-12 space-y-10 border-l border-cream/15 pl-8">
+              {workHistory.map((job) => (
+                <li key={`${job.role}-${job.company}`} className="relative">
+                  <span className="absolute -left-9.25 top-1.5 size-2.5 rounded-full bg-gold" />
+                  <h3 className="font-display text-2xl font-semibold text-cream">{job.role}</h3>
+                  <p className="mt-1 text-sm font-medium text-cream/55">
+                    {job.company} · {job.location} · {job.type}
+                  </p>
+                  <p className="mt-1 text-xs uppercase tracking-widest text-cream/40">{job.period}</p>
+                  <ul className="mt-3 space-y-1.5 text-sm text-cream/70">
+                    {job.points.map((point) => (
+                      <li key={point} className="flex gap-2">
+                        <span className="text-gold">–</span> {point}
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+        </div>
+      </section>
     </div>
   )
 }
