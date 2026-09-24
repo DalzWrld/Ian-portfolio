@@ -63,6 +63,23 @@ export default function ProjectDetail() {
                 </div>
               ))}
             </div>
+
+            <div className="mt-14 grid gap-8 border-t border-ink/10 pt-10 sm:grid-cols-2">
+              <div>
+                <p className="eyebrow text-gold-dark">Tech stack</p>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.stack.map((item) => (
+                    <Badge key={item} variant="outline">
+                      {item}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="eyebrow text-gold-dark">Status</p>
+                <p className="mt-3 text-sm text-ink/65">{project.status}</p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
