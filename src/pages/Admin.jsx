@@ -28,3 +28,13 @@ const emptyForm = {
   approach: "",
   outcome: "",
 }
+
+export default function Admin() {
+  const [projects, setProjects] = useProjects()
+  const [editingSlug, setEditingSlug] = useState(null)
+  const [form, setForm] = useState(emptyForm)
+
+  function handleChange(e) {
+    setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
+  }
+}
