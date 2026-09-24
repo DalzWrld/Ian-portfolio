@@ -58,4 +58,14 @@ export function Navbar() {
     // About / Work (and /work/:slug): ordinary route matching
     return location.pathname === link.to || location.pathname.startsWith(`${link.to}/`)
   }
+
+  return (
+    <header className="sticky top-0 z-50 border-b border-cream/10 bg-forest/95 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+        <Link to="/" className="font-decorative text-2xl tracking-wide text-cream" aria-label="Ian home">
+          IWN<span className="text-gold">.</span>
+        </Link>
+      </div>
+    </header>
+  )
 }
