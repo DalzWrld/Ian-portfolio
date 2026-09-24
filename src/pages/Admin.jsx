@@ -106,4 +106,30 @@ export default function Admin() {
     setProjects(next)
     cancelEdit()
   }
+
+  return (
+    <section className="bg-cream px-6 py-24 text-ink">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="eyebrow text-gold-dark">Private</p>
+        <h1 className="mt-3 font-display text-3xl sm:text-4xl">Manage Projects</h1>
+        <p className="mt-3 max-w-xl text-sm text-ink/60">
+          This page isn't linked anywhere in the site's nav — it's your own workspace. Changes save to this
+          browser's local storage only, so they won't appear for visitors on the live deployed site until you
+          copy the finished details into <code className="text-ink/80">src/data/content.js</code> by hand.
+        </p>
+        <Button
+          type="button"
+          variant="ghost"
+          size="sm"
+          className="mt-4"
+          onClick={() => {
+            adminLogout()
+            window.location.reload()
+          }}
+        >
+          <LogOut size={14} /> Lock this page
+        </Button>
+      </div>
+    </section>
+  )
 }
