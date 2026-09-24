@@ -12,3 +12,13 @@ const links = [
   { key: "skills", to: "/#skills", label: "Skills" },
   { key: "process", to: "/#process", label: "Process" },
 ]
+
+// Section ids on the Home page that should take over the nav's active
+// state as they scroll into view (instead of "Home" staying highlighted).
+const HOME_SECTIONS = ["skills", "process"]
+
+export function Navbar() {
+  const [open, setOpen] = useState(false)
+  const location = useLocation()
+  const [activeSection, setActiveSection] = useState(null) // null | "skills" | "process"
+}
