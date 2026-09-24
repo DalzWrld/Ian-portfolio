@@ -71,6 +71,25 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* FEATURED WORK */}
+      <section className="bg-forest py-24 text-cream">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+              <SectionHeading number="02" label="Selected Work" inverse className="mb-0" />
+              <Link to="/work" className="eyebrow text-gold hover:underline">
+                View all projects →
+              </Link>
+            </div>
+            <div className="grid gap-10 md:grid-cols-3">
+              {projects.slice(0, 3).map((project) => (
+                <ProjectCard key={project.slug} project={project} inverse />
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
