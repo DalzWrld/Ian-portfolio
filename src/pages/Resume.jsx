@@ -23,6 +23,29 @@ export default function Resume() {
           </Button>
         </div>
       </section>
+
+      {/* SKILLS */}
+      <section className="bg-cream px-6 pt-24 pb-12 text-ink">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <SectionHeading number="01" label="Skills" />
+            <h2 className="font-display text-3xl leading-snug sm:text-4xl">
+              Technologies <em className="italic text-gold-dark">I work with.</em>
+            </h2>
+            <p className="mt-4 max-w-xl text-ink/60">
+              Frameworks, libraries and tools I have experience with. This isn't a complete list — I'm
+              constantly learning new things, so it's a little outdated by design.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {skills.map((skill) => (
+                <Badge key={skill} variant="outline">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </div>
   )
 }
