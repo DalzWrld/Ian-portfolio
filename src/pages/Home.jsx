@@ -142,6 +142,28 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* PROCESS */}
+      <section id="process" className="scroll-mt-24 bg-forest py-24 text-cream">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <SectionHeading number="05" label="My Process" inverse />
+            <h2 className="font-display text-3xl leading-snug md:text-4xl">How I get from idea to launch.</h2>
+
+            <div className="mt-14 grid gap-8 md:grid-cols-5">
+              {process.map((step) => (
+                <div key={step.step} className="text-center md:text-left">
+                  <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full border border-gold text-sm font-semibold text-gold md:mx-0">
+                    {step.step}
+                  </div>
+                  <h3 className="mt-4 font-display text-lg">{step.title}</h3>
+                  <p className="mt-2 text-sm text-cream/60">{step.description}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
