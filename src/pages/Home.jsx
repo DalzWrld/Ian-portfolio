@@ -187,6 +187,28 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="bg-forest py-24 text-center text-cream">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <SectionHeading
+              number="07"
+              label="Let's Talk"
+              inverse
+              className="mx-auto flex flex-col items-center text-center"
+            />
+            <h2 className="font-display text-3xl md:text-4xl">
+              Let's build something <em className="italic text-gold">amazing together.</em>
+            </h2>
+            <Button asChild className="mt-8">
+              <Link to="/contact">
+                Get in touch <ArrowRight size={16} />
+              </Link>
+            </Button>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
