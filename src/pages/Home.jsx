@@ -90,6 +90,58 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* SKILLS + WHAT I DO */}
+      <section id="skills" className="scroll-mt-24 bg-cream py-24 text-ink">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <div className="grid gap-16 md:grid-cols-2">
+              <div>
+                <SectionHeading number="03" label="Skills" />
+                <h2 className="font-display text-3xl leading-snug">
+                  Technologies <em className="italic text-gold-dark">I work with.</em>
+                </h2>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <Badge key={skill} variant="outline">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+                <p className="mt-6 eyebrow text-ink/50">Always exploring, always learning.</p>
+              </div>
+
+              <Separator className="md:hidden" />
+
+              <div>
+                <SectionHeading number="04" label="What I Do" />
+                <div className="space-y-6">
+                  {whatIDo.map((item, i) => {
+                    const Icon = whatIDoIcons[i] ?? Code2
+                    return (
+                      <div key={item.title} className="flex gap-4">
+                        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-forest text-gold">
+                          <Icon size={18} />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold">{item.title}</h3>
+                          <p className="mt-1 text-sm text-ink/60">{item.description}</p>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* Vertical rule between the two columns on desktop only */}
+              <Separator
+                orientation="vertical"
+                className="absolute inset-y-0 left-1/2 hidden -translate-x-1/2 md:block"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
