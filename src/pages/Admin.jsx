@@ -202,6 +202,46 @@ export default function Admin() {
               )}
             </div>
           </form>
+
+          {/* LIST */}
+          <div>
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="font-display text-xl">Current projects ({projects.length})</h2>
+              <Button type="button" variant="ghost" size="sm" onClick={handleReset}>
+                <RotateCcw size={14} /> Reset to defaults
+              </Button>
+            </div>
+
+            <ul className="space-y-4">
+              {projects.map((project) => (
+                <li key={project.slug} className="rounded-xl border border-ink/10 p-4">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <Badge>{project.category}</Badge>
+                      <h3 className="mt-2 font-display text-lg">{project.title}</h3>
+                      <p className="mt-1 text-sm text-ink/60">{project.description}</p>
+                    </div>
+                    <div className="flex shrink-0 gap-2">
+                      <button
+                        onClick={() => startEdit(project)}
+                        aria-label={`Edit ${project.title}`}
+                        className="rounded-full border border-ink/15 p-2 hover:border-gold hover:text-gold-dark"
+                      >
+                        <Pencil size={14} />
+                      </button>
+                      <button
+                        onClick={() => handleDelete(project)}
+                        aria-label={`Delete ${project.title}`}
+                        className="rounded-full border border-ink/15 p-2 hover:border-red-400 hover:text-red-600"
+                      >
+                        <Trash2 size={14} />
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
