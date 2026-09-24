@@ -174,3 +174,9 @@ export const testimonials = [
     role: "Founder, Company",
   },
 ]
+
+export const principles = [
+  { title: "Clarity", description: "Good interfaces should make the next action obvious." },
+  { title: "Curiosity", description: "I like understanding why something works, not just making it work." },
+  { title: "Craft", description: "Small details matter, especially when they compound across a product." },
+]
