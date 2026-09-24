@@ -13,3 +13,10 @@ export function notifyProjectUpdated(title) {
     className: "!bg-amber-50 !border-amber-300 !text-amber-900",
   })
 }
+
+export function notifyProjectDeleted(title) {
+  toast.error(`"${title}" removed`, {
+    description: "This project is no longer visible on your site.",
+    className: "!bg-rose-50 !border-rose-300 !text-rose-900",
+  })
+}
