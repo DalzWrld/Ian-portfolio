@@ -33,6 +33,29 @@ export default function About() {
           </p>
         </div>
       </section>
+
+      {/* THE STORY */}
+      <section className="bg-cream py-24 text-ink">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <SectionHeading number="01" label="The Story" />
+            <div className="grid gap-10 md:grid-cols-2">
+              <div>
+                <h2 className="font-display text-2xl leading-snug sm:text-3xl">
+                  A career pivot can be a feature, not a bug.
+                </h2>
+                <p className="mt-4 text-sm leading-7 text-ink/60">
+                  I made the jump into tech from a food science background, and that shift taught me to enjoy
+                  learning things from the ground up. I'm training as a Full Stack Web Developer at Moringa
+                  School, with a particular pull toward UI/UX design and front-end development. My path has made
+                  me interested in both sides of the product: how something should feel, and how it should
+                  actually work.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
