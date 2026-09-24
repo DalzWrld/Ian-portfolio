@@ -157,3 +157,20 @@ export const whatIDo = [
     description: "Turning ideas and challenges into efficient, scalable solutions.",
   },
 ]
+
+export const process = [
+  { step: "01", title: "Discover", description: "I learn about your goals, audience and the problem we're solving." },
+  { step: "02", title: "Plan", description: "I research, analyze and map out the best approach for your project." },
+  { step: "03", title: "Design", description: "I create wireframes and designs that are clean, clear and user-focused." },
+  { step: "04", title: "Develop", description: "I bring the design to life with clean code and modern technologies." },
+  { step: "05", title: "Deliver", description: "I test, refine and deliver a product you'll be proud to launch." },
+]
+
+export const testimonials = [
+  {
+    quote:
+      "Iann was a pleasure to work with. He's dedicated, communicates well, and delivers quality work on time. I'd definitely work with him again.",
+    name: "Client Name",
+    role: "Founder, Company",
+  },
+]
