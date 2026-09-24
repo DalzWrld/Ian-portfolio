@@ -43,3 +43,23 @@ function PreviewArt({ tone = "dark"}) {
     </div>
   )
 }
+
+export function ProjectCard({ project, inverse = "false" }) {
+  return (
+    <article className="group">
+      <Link to={`/work/${project.slug}`} className="block">
+        {project.image ? (
+          <div className="aspect-16/10 overflow-hidden rounded-xl border border-current/10">
+            <img
+              src={project.image}
+              alt={`${project.title} preview`}
+              className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+        ) : (
+          <PreviewArt tone={inverse ? "dark" : "light"} />
+        )}
+      </Link>
+    </article>
+  )
+}
