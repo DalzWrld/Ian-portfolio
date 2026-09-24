@@ -64,4 +64,20 @@ export const projects = [
       outcome: "A full stack app covering the whole loop — frontend consumption of a public API, then a self-built backend with authenticated, user-owned CRUD.",
     },
   },
+  {
+    slug: "wordly",
+    image: "",
+    category: "Frontend",
+    title: "Wordly",
+    description: "A simple dictionary lookup tool — search any word to get its definitions, phonetics and usage, pulled live from a public dictionary API.",
+    stack: ["JavaScript", "HTML5", "CSS3", "Fetch API"],
+    status: "Completed",
+    link: "",
+    repo: "https://github.com/DalzWrld/wordly-dictionary-api-js",
+    details: {
+      challenge: "Practice consuming a real external API and rendering its response cleanly, without a framework to lean on.",
+      approach: "Used vanilla JavaScript and the Fetch API to query the Free Dictionary API, then rendered results dynamically into the DOM.",
+      outcome: "A small, focused project demonstrating async/await, DOM manipulation and API error handling in plain JavaScript.",
+    },
+  },
 ]
