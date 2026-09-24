@@ -1,7 +1,7 @@
 export const projects = [
  {
     slug: "wanderlist",
-    image: "",
+    image: "src/images/WanderList-screenshot.png",
     category: "Full Stack",
     title: "WanderList",
     description: "A single-page app for saving and organizing dream travel destinations — add a place, note why you want to go, and track it as plans evolve. Built as a 4-person team project.",
@@ -17,7 +17,7 @@ export const projects = [
   },
   {
     slug: "questly",
-    image: "",
+    image: "src/images/Questly-screenshot.png",
     category: "Full Stack",
     title: "Questly",
     description: "A crowdsourced learning platform with gamification — learners discover and complete challenges, contributors create content, and admins manage the platform. Built as a 5-person capstone team.",
@@ -33,7 +33,7 @@ export const projects = [
   },
   {
     slug: "plantsy",
-    image: "",
+    image: "src/images/Plantsy-screenshot.png",
     category: "Frontend",
     title: "Plantsy",
     description: "An e-commerce web app for plant lovers to discover and shop their favorite indoor plants.",
@@ -50,7 +50,7 @@ export const projects = [
   },
   {
     slug: "cosmos-explorer",
-    image: "",
+    image: "src/images/Cosmos-Explorer-screenshot.png",
     category: "Full Stack",
     title: "Cosmos Explorer",
     description: "Space is complicated — exploring it doesn't have to be. A discovery app for astronomy picture of the day, near-earth objects, and NASA's image library.",
@@ -98,7 +98,7 @@ export const projects = [
   },
   {
     slug: "cookit",
-    image: "",
+    image: "src/images/CookIt-screenshot.png",
     category: "Frontend",
     title: "CookIt",
     description: "A recipe discovery app for browsing and searching recipes, built with a component-driven React frontend and a local mock dataset.",
@@ -114,13 +114,13 @@ export const projects = [
   },
   {
     slug: "checkit",
-    image: "https://check-it-liart.vercel.app/",
+    image: "src/images/CheckIt-screenshot.png",
     category: "Frontend",
     title: "CheckIt",
     description: "An interactive shopping list for adding and checking off items, built with plain JavaScript as an early practice project.",
     stack: ["JavaScript", "HTML5", "CSS3"],
     status: "Completed",
-    link: "#",
+    link: "https://check-it-liart.vercel.app/",
     repo: "https://github.com/DalzWrld/CheckIt-interactive-shopping-list",
     details: {
       challenge: "Practice core DOM manipulation and event handling in plain JavaScript before introducing any persistence layer.",
