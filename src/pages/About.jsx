@@ -95,6 +95,19 @@ export default function About() {
           </Reveal>
         </div>
       </section>
+
+      {/* CTA */}
+      <section className="bg-cream py-16 text-ink">
+        <div className="mx-auto flex max-w-6xl px-6 flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="eyebrow text-gold-dark">Next chapter</p>
+            <h2 className="mt-2 font-display text-2xl sm:text-3xl">Let's see what I can build next.</h2>
+          </div>
+          <Link to="/work" className="inline-flex items-center gap-2 eyebrow text-gold-dark hover:underline">
+            Explore the work <ArrowRight size={14} />
+          </Link>
+        </div>
+      </section>
     </>
   )
 }
