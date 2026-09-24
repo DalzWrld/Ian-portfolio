@@ -65,6 +65,21 @@ export function Navbar() {
         <Link to="/" className="font-decorative text-2xl tracking-wide text-cream" aria-label="Ian home">
           IWN<span className="text-gold">.</span>
         </Link>
+
+        <nav className="hidden items-center gap-8 text-xs font-semibold uppercase tracking-widest md:flex">
+          {links.map((link) => (
+            <Link
+              key={link.key}
+              to={link.to}
+              className={cn(
+                "nav-link text-cream/70 transition-colors hover:text-gold",
+                isLinkActive(link) && "active text-gold"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   )
