@@ -1,0 +1,8 @@
+import { Outlet, useLocation } from "react-router-dom"
+import { useEffect } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { Navbar } from "./Navbar"
+import { Footer } from "./Footer"
+import { HashScroll } from "@/components/HashScroll"
+import { BackToTop } from "@/components/BackToTop"
+import { Toaster } from "@/components/ui/sonner"
