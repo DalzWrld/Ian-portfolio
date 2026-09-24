@@ -94,6 +94,27 @@ export function Navbar() {
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
+
+      {open && (
+        <nav className="flex flex-col border-t border-cream/10 bg-forest-soft md:hidden">
+          {links.map((link) => (
+            <Link
+              key={link.key}
+              to={link.to}
+              onClick={() => setOpen(false)}
+              className={cn(
+                "border-b border-cream/10 px-6 py-4 text-sm font-medium text-cream/70",
+                isLinkActive(link) && "text-gold"
+              )}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link to="/contact" onClick={() => setOpen(false)} className="px-6 py-4 text-sm font-semibold text-gold">
+            Let's Talk
+          </Link>
+        </nav>
+      )}
     </header>
   )
 }
