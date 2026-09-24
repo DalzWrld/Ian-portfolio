@@ -15,4 +15,20 @@ export const projects = [
       outcome: "A working single-page app demonstrating controlled forms, RESTful CRUD operations, and React Router navigation patterns.",
     },
   },
+  {
+    slug: "questly",
+    image: "",
+    category: "Full Stack",
+    title: "Questly",
+    description: "A crowdsourced learning platform with gamification — learners discover and complete challenges, contributors create content, and admins manage the platform. Built as a 5-person capstone team.",
+    stack: ["React", "TailwindCSS", "Flask", "SQLAlchemy", "SQLite"],
+    status: "In Progress",
+    link: "https://questly-dun.vercel.app",
+    repo: "https://github.com/penzimbuthia-sudo/Questly",
+    details: {
+      challenge: "Design a full learning platform — think Canvas with Duolingo-style gamification — with distinct Learner, Contributor and Admin roles, split fairly across a 5-person team on a tight deadline.",
+      approach: "As Scrum Master, I divided work across the team and personally owned core app setup, authentication and routing on both the frontend and backend, alongside teammates Penzi Mbuthia, Leo Macau, Allan Chome and Nyaga Murimi.",
+      outcome: "A deployed capstone project demonstrating full stack collaboration, JWT-based auth, and role-based access across a real team codebase. Some features (including payment integration) remain unfinished, as noted honestly in the repo.",
+    },
+  },
 ]
