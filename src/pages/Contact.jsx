@@ -9,7 +9,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 
 // Replace with your own Formspree endpoint from formspree.io
-const FORM_ENDPOINT = "https://formspree.io/f/xxxxxxxx"
+const FORM_ENDPOINT = "https://formspree.io/f/mzezvbka"
 
 export default function Contact() {
   const [status, setStatus] = useState("idle") // idle | sending | sent
