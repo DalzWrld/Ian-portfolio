@@ -80,6 +80,19 @@ export default function ProjectDetail() {
                 <p className="mt-3 text-sm text-ink/65">{project.status}</p>
               </div>
             </div>
+
+            <div className="mt-10 flex flex-wrap gap-3">
+              <Button asChild>
+                <a href={project.link} onClick={(e) => project.link === "#" && e.preventDefault()}>
+                  Live demo <ArrowUpRight size={16} />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={project.repo || "https://github.com/DalzWrld"} target="_blank" rel="noopener">
+                  Source code <ArrowUpRight size={16} />
+                </a>
+              </Button>
+            </div>
           </Reveal>
         </div>
       </section>
