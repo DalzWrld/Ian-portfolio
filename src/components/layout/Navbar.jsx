@@ -47,4 +47,15 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [location.pathname])
+
+  function isLinkActive(link) {
+    if (link.key === "skills" || link.key === "process") {
+      return location.pathname === "/" && activeSection === link.key
+    }
+    if (link.key === "home") {
+      return location.pathname === "/" && activeSection === null
+    }
+    // About / Work (and /work/:slug): ordinary route matching
+    return location.pathname === link.to || location.pathname.startsWith(`${link.to}/`)
+  }
 }
