@@ -21,6 +21,10 @@ export function SectionHeading({ number, label, inverse = false, className }) {
           {number}
         </div>
       )}
+      <div className="mt-3 flex items-center gap-3">
+        <span className="h-px w-8 bg-gold" />
+        <p className={cn("eyebrow", inverse ? "text-cream/70" : "text-ink/60")}>{label}</p>
+      </div>
     </div>
   )
 }
