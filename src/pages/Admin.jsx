@@ -129,6 +129,80 @@ export default function Admin() {
         >
           <LogOut size={14} /> Lock this page
         </Button>
+
+        <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_1.2fr]">
+          {/* FORM */}
+          <form onSubmit={handleSubmit} className="space-y-4 rounded-xl border border-ink/10 p-6">
+            <h2 className="font-display text-xl">{editingSlug ? "Edit project" : "Add a project"}</h2>
+
+            <div className="space-y-2">
+              <Label htmlFor="title">Title</Label>
+              <Input id="title" name="title" value={form.title} onChange={handleChange} required />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="category">Category</Label>
+              <Select id="category" name="category" value={form.category} onChange={handleChange} required>
+                <option value="" disabled>Select a category</option>
+                {CATEGORY_OPTIONS.map((opt) => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="status">Status</Label>
+              <Select id="status" name="status" value={form.status} onChange={handleChange}>
+                <option value="" disabled>Select a status</option>
+                {STATUS_OPTIONS.map((opt) => (
+                  <option key={opt} value={opt}>{opt}</option>
+                ))}
+              </Select>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="description">Short description</Label>
+              <Textarea id="description" name="description" value={form.description} onChange={handleChange} required />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="stack">Tech stack (comma-separated)</Label>
+              <Input id="stack" name="stack" value={form.stack} onChange={handleChange} placeholder="React, Flask, SQLite" />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="link">Live link</Label>
+              <Input id="link" name="link" value={form.link} onChange={handleChange} placeholder="https://..." />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="repo">Repository link</Label>
+              <Input id="repo" name="repo" value={form.repo} onChange={handleChange} placeholder="https://github.com/..." />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="image">Image URL</Label>
+              <Input id="image" name="image" value={form.image} onChange={handleChange} placeholder="https://..." />
+            </div>
+
+            <div className="space-y-2">
+              <Label htmlFor="challenge">Challenge</Label>
+              <Textarea id="challenge" name="challenge" value={form.challenge} onChange={handleChange} />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="approach">Approach</Label>
+              <Textarea id="approach" name="approach" value={form.approach} onChange={handleChange} />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="outcome">Outcome</Label>
+              <Textarea id="outcome" name="outcome" value={form.outcome} onChange={handleChange} />
+            </div>
+
+            <div className="flex gap-3 pt-2">
+              <Button type="submit">
+                {editingSlug ? "Save changes" : "Add project"} {!editingSlug && <Plus size={16} />}
+              </Button>
+              {editingSlug && (
+                <Button type="button" variant="outline" onClick={cancelEdit}>
+                  Cancel
+                </Button>
+              )}
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   )
