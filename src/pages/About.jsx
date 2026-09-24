@@ -51,6 +51,16 @@ export default function About() {
                   me interested in both sides of the product: how something should feel, and how it should
                   actually work.
                 </p>
+                <div className="mt-6 space-y-3">
+                  {facts.map(({ icon: Icon, label, value }) => (
+                    <div key={label} className="flex items-start gap-3 text-sm">
+                      <Icon size={16} className="mt-0.5 shrink-0 text-gold-dark" />
+                      <p>
+                        <span className="text-ink/45">{label}:</span> {value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </Reveal>
