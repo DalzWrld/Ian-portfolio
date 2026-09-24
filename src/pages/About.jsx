@@ -62,6 +62,17 @@ export default function About() {
                   ))}
                 </div>
               </div>
+              <div className="space-y-5">
+                {habits.map(({ icon: Icon, title, text }) => (
+                  <div key={title} className="flex gap-4 rounded-xl border border-ink/10 p-4">
+                    <Icon size={18} className="mt-1 shrink-0 text-gold-dark" />
+                    <div>
+                      <h3 className="font-display text-lg">{title}</h3>
+                      <p className="mt-1 text-sm leading-6 text-ink/60">{text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>
