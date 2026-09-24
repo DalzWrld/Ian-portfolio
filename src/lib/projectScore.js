@@ -48,3 +48,19 @@ export function resetProjects() {
   writeStore(defaultProjects)
   return defaultProjects
 }
+
+// Used by Home/Work so they reflect whatever's in localStorage, and
+// stay in sync if you edit projects in another tab.
+export function useProjects() {
+  const [projects, setProjects] = useState(() => getProjects())
+
+  useEffect(() => {
+    function handleStorage(e) {
+      if (e.key === STORAGE_KEY) setProjects(getProjects())
+    }
+    window.addEventListener("storage", handleStorage)
+    return () => window.removeEventListener("storage", handleStorage)
+  }, [])
+
+  return [projects, setProjects]
+}
