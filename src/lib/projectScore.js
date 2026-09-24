@@ -25,3 +25,21 @@ export function getProjects() {
 export function getProject(slug) {
   return readStore().find((p) => p.slug === slug)
 }
+
+export function addProject(project) {
+  const next = [...readStore(), project]
+  writeStore(next)
+  return next
+}
+
+export function updateProject(slug, updates) {
+  const next = readStore().map((p) => (p.slug === slug ? { ...p, ...updates } : p))
+  writeStore(next)
+  return next
+}
+
+export function deleteProject(slug) {
+  const next = readStore().filter((p) => p.slug !== slug)
+  writeStore(next)
+  return next
+}
