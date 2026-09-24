@@ -142,3 +142,18 @@ export const skills = [
   "Python & Flask",
   "SQL",
 ]
+
+export const whatIDo = [
+  {
+    title: "UI/UX Design",
+    description: "Designing clean, intuitive interfaces that provide meaningful experiences.",
+  },
+  {
+    title: "Frontend Development",
+    description: "Building responsive, accessible and performant web applications.",
+  },
+  {
+    title: "Problem Solving",
+    description: "Turning ideas and challenges into efficient, scalable solutions.",
+  },
+]
