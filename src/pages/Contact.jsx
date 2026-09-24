@@ -63,10 +63,10 @@ export default function Contact() {
           <div className="mt-12 grid gap-12 md:grid-cols-[1fr_1.2fr]">
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3">
-                <Mail size={18} className="text-gold" /> hello@ian.dev
+                <Mail size={18} className="text-gold" /> waithakaian49@gmail.com
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={18} className="text-gold" /> +254 700 123 456
+                <Phone size={18} className="text-gold" /> +254 704 088 446
               </li>
               <li className="flex items-center gap-3">
                 <MapPin size={18} className="text-gold" /> Nairobi, Kenya
