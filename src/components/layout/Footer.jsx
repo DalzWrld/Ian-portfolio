@@ -32,6 +32,34 @@ export function Footer() {
                         >
                           waithakaian49@gmail.com <ArrowUpRight size={14} />
                         </a>
+                        <div className="mt-4 flex gap-3">
+                            <a
+                                href="https://github.com/DalzWrld"
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="GitHub"
+                                className="rounded-full border border-cream/15 p-2.5 hover:border-gold hover:text-gold"
+                            >
+                                <FaGithub size={16} />
+                            </a>
+                            <a 
+                                href="https://www.linkedin.com/in/ian-ng%E2%80%99ang%E2%80%99a-9544271b1/" 
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="LinkedIn" 
+                                className="rounded-full border border-cream/15 p-2.5 hover:border-gold hover:text-gold"
+                            >
+                                <Linkedin size={16} />
+                            </a>
+                            <a href="https://www.instagram.com/doitlike.iann/" 
+                                target="_blank"
+                                rel="noopener"
+                                aria-label="Instagram" 
+                                className="rounded-full border border-cream/15 p-2.5 hover:border-gold hover:text-gold"
+                            >
+                                <FaInstagram size={16} />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
