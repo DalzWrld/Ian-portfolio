@@ -80,6 +80,19 @@ export function Navbar() {
             </Link>
           ))}
         </nav>
+
+        <Button asChild size="sm" className="hidden md:inline-flex">
+          <Link to="/contact">Let's Talk</Link>
+        </Button>
+
+        <button
+          className="text-cream md:hidden"
+          aria-label="Toggle menu"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </div>
     </header>
   )
