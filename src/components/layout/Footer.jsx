@@ -62,6 +62,13 @@ export function Footer() {
                         </div>
                     </div>
                 </div>
+
+                <div className="mt-10 flex flex-col gap-2 border-t border-cream/10 pt-6 text-[10px] uppercase tracking-widest text-cream/40 sm:flex-row sm:items-center sm:justify-between">
+                    <p className="flex items-center gap-1.5">
+                        <Copyright size={11} /> {new Date().getFullYear()} Ian. All rights reserved.
+                    </p>
+                    <p>Built with passion &amp; purpose.</p>
+                </div>
             </div>
         </footer>
     )
