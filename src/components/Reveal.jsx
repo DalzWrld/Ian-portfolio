@@ -30,4 +30,18 @@ export function Reveal({ children, className, delay = 0 }) {
     observer.observe(node)
     return () => observer.disconnect()
   }, [])
+
+  return (
+    <div
+      ref={ref}
+      style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
+      className={cn(
+        "transition-all duration-700 ease-out",
+        visible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0",
+        className
+      )}
+    >
+      {children}
+    </div>
+  )
 }
