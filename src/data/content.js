@@ -129,3 +129,16 @@ export const projects = [
     },
   },
 ]
+
+export const skills = [
+  "HTML5",
+  "CSS3",
+  "JavaScript",
+  "React",
+  "TailwindCSS",
+  "Git & GitHub",
+  "Figma",
+  "Node.js",
+  "Python & Flask",
+  "SQL",
+]
