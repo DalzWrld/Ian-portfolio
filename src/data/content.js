@@ -80,4 +80,20 @@ export const projects = [
       outcome: "A small, focused project demonstrating async/await, DOM manipulation and API error handling in plain JavaScript.",
     },
   },
+  {
+    slug: "project-management-cli",
+    image: "",
+    category: "Backend",
+    title: "Project Management CLI Tool",
+    description: "A command-line multi-user project tracker built around OOP with inheritance — create users, assign projects, manage tasks, and persist everything to JSON with no database.",
+    stack: ["Python", "argparse", "OOP", "JSON persistence"],
+    status: "Completed",
+    link: "#",
+    repo: "https://github.com/DalzWrld/python-project-management-cli-tool",
+    details: {
+      challenge: "Demonstrate object-oriented Python design (including inheritance) and durable data persistence, without a database or web framework.",
+      approach: "Modeled users, projects and tasks as classes with inheritance, exposed through argparse subcommands, using the rich and python-dateutil packages for output and date handling.",
+      outcome: "Backed by a 35-test pytest suite, built to hit the assignment's 'Excelled' rubric tier.",
+    },
+  },
 ]
