@@ -12,4 +12,25 @@ import Contact from "@/pages/Contact"
 import Resume from "@/pages/Resume"
 import Admin from "@/pages/Admin"
 
-export default function App() {}
+export default function App() {
+  const [loading, setLoading] = useState(true)
+
+  return (
+    <>
+      <AnimatePresence>{loading && <Loader onFinish={() => setLoading(false)} />}</AnimatePresence>
+    
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/work" element={<Work />} />
+          <Route path="/work/:slug" element={<ProjectDetail />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<AdminGate><Admin /></AdminGate>} />
+        </Route>
+      </Routes>
+    </>
+  )
+}
