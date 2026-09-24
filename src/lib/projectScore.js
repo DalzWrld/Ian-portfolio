@@ -17,3 +17,11 @@ function readStore() {
 function writeStore(projects) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(projects))
 }
+
+export function getProjects() {
+  return readStore()
+}
+
+export function getProject(slug) {
+  return readStore().find((p) => p.slug === slug)
+}
