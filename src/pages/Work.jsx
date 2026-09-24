@@ -15,7 +15,7 @@ export default function Work() {
             Sites I've <em className="italic text-gold-dark">built.</em>
           </h1>
           <p className="mt-3 max-w-lg text-ink/60">
-            Here's a running list of deployed projects.
+            Here's a running list of deployed projects, ranging from completed projects to those still in progress.
           </p>
 
           <div className="mt-12 grid gap-12 md:grid-cols-3">
