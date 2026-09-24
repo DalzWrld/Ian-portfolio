@@ -77,6 +77,24 @@ export default function About() {
           </Reveal>
         </div>
       </section>
+
+      {/* PRINCIPLES */}
+      <section className="bg-forest py-24 text-cream">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <SectionHeading number="02" label="Principles" inverse />
+            <div className="grid gap-px overflow-hidden rounded-xl bg-cream/10 sm:grid-cols-3">
+              {principles.map((p, i) => (
+                <div key={p.title} className="bg-forest p-6">
+                  <span className="text-xs text-gold">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-8 font-display text-2xl">{p.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-cream/55">{p.description}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
