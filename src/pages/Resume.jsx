@@ -46,6 +46,32 @@ export default function Resume() {
           </Reveal>
         </div>
       </section>
+
+      {/* EDUCATION */}
+      <section className="bg-cream px-6 py-24 text-ink">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <Separator className="mb-16" />
+            <SectionHeading number="02" label="Education" />
+            <h2 className="font-display text-3xl leading-snug sm:text-4xl">
+              Where my <em className="italic text-gold-dark">training comes from.</em>
+            </h2>
+
+            <ol className="mt-12 space-y-10 border-l border-ink/15 pl-8">
+              {education.map((item) => (
+                <li key={`${item.degree}-${item.institution}`} className="relative">
+                  <span className="absolute -left-9.25 top-1.5 size-2.5 rounded-full bg-gold" />
+                  <h3 className="font-display text-2xl font-semibold text-ink">{item.degree}</h3>
+                  <p className="mt-1 text-sm font-medium text-ink/55">
+                    {item.institution} · {item.location}
+                  </p>
+                  <p className="mt-1 text-xs uppercase tracking-widest text-ink/40">{item.period}</p>
+                </li>
+              ))}
+            </ol>
+          </Reveal>
+        </div>
+      </section>
     </div>
   )
 }
