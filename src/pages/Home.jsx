@@ -52,6 +52,25 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ABOUT TEASER */}
+      <section className="bg-cream py-24 text-ink">
+        <div className="mx-auto max-w-6xl px-6">
+          <Reveal>
+            <SectionHeading number="01" label="About Me" />
+            <h2 className="font-display text-3xl leading-snug sm:text-4xl">
+              Curious mind. Problem solver. <em className="italic text-gold-dark">Continuous learner.</em>
+            </h2>
+            <p className="mt-4 max-w-2xl text-ink/60">
+              I'm a Software Engineering student who enjoys building things that live on the internet, with a
+              particular pull toward accessible, responsive and intuitive applications.
+            </p>
+            <Link to="/about" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-gold-dark hover:underline">
+              More about me <ArrowRight size={14} />
+            </Link>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
