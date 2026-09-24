@@ -43,3 +43,8 @@ export function deleteProject(slug) {
   writeStore(next)
   return next
 }
+
+export function resetProjects() {
+  writeStore(defaultProjects)
+  return defaultProjects
+}
