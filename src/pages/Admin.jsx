@@ -91,4 +91,19 @@ export default function Admin() {
     }
     cancelEdit()
   }
+
+  function handleDelete(project) {
+    if (!window.confirm(`Delete "${project.title}"? This can't be undone.`)) return
+    const next = deleteProject(project.slug)
+    setProjects(next)
+    notifyProjectDeleted(project.title)
+    if (editingSlug === project.slug) cancelEdit()
+  }
+
+  function handleReset() {
+    if (!window.confirm("Reset to the default project list? This discards anything you've added or edited here.")) return
+    const next = resetProjects()
+    setProjects(next)
+    cancelEdit()
+  }
 }
