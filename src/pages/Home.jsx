@@ -164,6 +164,29 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
+
+      {/* KIND WORDS */}
+      <section className="bg-cream py-24 text-ink">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <Reveal>
+            <SectionHeading number="06" label="Kind Words" className="mx-auto flex flex-col items-center text-center" />
+            {testimonials.map((t) => (
+              <blockquote key={t.name}>
+                <p className="font-display text-2xl leading-snug">"{t.quote}"</p>
+                <footer className="mt-6 flex items-center justify-center gap-3">
+                  <Avatar>
+                    <AvatarFallback>{t.name.charAt(0)}</AvatarFallback>
+                  </Avatar>
+                  <div className="text-left text-sm">
+                    <p className="font-semibold">{t.name}</p>
+                    <p className="text-ink/55">{t.role}</p>
+                  </div>
+                </footer>
+              </blockquote>
+            ))}
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
