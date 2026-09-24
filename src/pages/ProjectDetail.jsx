@@ -45,6 +45,27 @@ export default function ProjectDetail() {
           <div className="mt-10 aspect-16/7 rounded-2xl border border-gold/15 bg-linear-to-br from-gold/10 via-forest-soft to-forest-soft" />
         </div>
       </section>
+
+      {/* CASE STUDY */}
+      <section className="bg-cream px-6 py-20 text-ink">
+        <div className="mx-auto max-w-4xl">
+          <Reveal>
+            <SectionHeading label="Case Study" />
+            <div className="grid gap-8 sm:grid-cols-3">
+              {[
+                ["Challenge", project.details.challenge],
+                ["Approach", project.details.approach],
+                ["Outcome", project.details.outcome],
+              ].map(([title, text]) => (
+                <div key={title} className="rounded-xl border border-ink/10 p-5">
+                  <h2 className="font-display text-xl">{title}</h2>
+                  <p className="mt-2 text-sm leading-6 text-ink/60">{text}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
     </>
   )
 }
