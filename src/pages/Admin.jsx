@@ -37,4 +37,58 @@ export default function Admin() {
   function handleChange(e) {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }))
   }
+
+  function startEdit(project) {
+    setEditingSlug(project.slug)
+    setForm({
+      title: project.title,
+      category: project.category,
+      description: project.description,
+      stack: project.stack.join(", "),
+      status: project.status,
+      link: project.link,
+      repo: project.repo || "",
+      image: project.image || "",
+      challenge: project.details?.challenge ?? "",
+      approach: project.details?.approach ?? "",
+      outcome: project.details?.outcome ?? "",
+    })
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
+  function cancelEdit() {
+    setEditingSlug(null)
+    setForm(emptyForm)
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    const payload = {
+      title: form.title,
+      category: form.category,
+      description: form.description,
+      stack: form.stack.split(",").map((s) => s.trim()).filter(Boolean),
+      status: form.status,
+      link: form.link || "#",
+      repo: form.repo || null,
+      image: form.image || null,
+      details: {
+        challenge: form.challenge,
+        approach: form.approach,
+        outcome: form.outcome,
+      },
+    }
+
+    if (editingSlug) {
+      const next = updateProject(editingSlug, payload)
+      setProjects(next)
+      notifyProjectUpdated(payload.title)
+    } else {
+      const slug = slugify(form.title)
+      const next = addProject({ slug, ...payload })
+      setProjects(next)
+      notifyProjectAdded(payload.title)
+    }
+    cancelEdit()
+  }
 }
