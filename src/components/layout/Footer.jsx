@@ -1,5 +1,5 @@
-import { Linkedin, ArrowUpRight, Copyright } from "lucide-react"
-import { FaGithub, FaInstagram } from "react-icons/fa6"
+import { ArrowUpRight, Copyright } from "lucide-react"
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa6"
 import { Link } from "react-router-dom"
 
 export function Footer() {
@@ -49,7 +49,7 @@ export function Footer() {
                                 aria-label="LinkedIn" 
                                 className="rounded-full border border-cream/15 p-2.5 hover:border-gold hover:text-gold"
                             >
-                                <Linkedin size={16} />
+                                <FaLinkedin size={16} />
                             </a>
                             <a href="https://www.instagram.com/doitlike.iann/" 
                                 target="_blank"
