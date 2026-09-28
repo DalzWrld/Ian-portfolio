@@ -80,7 +80,8 @@ export default function Admin() {
     }
 
     if (editingSlug) {
-      const next = updateProject(editingSlug, payload)
+      const nextSlug = slugify(form.title) || editingSlug
+      const next = updateProject(editingSlug, { ...payload, slug: nextSlug })
       setProjects(next)
       notifyProjectUpdated(payload.title)
     } else {

@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
  * real screenshot. Swap the <div> below for an <img src="..."> of an
  * actual screenshot once you have one — same aspect ratio (16/10).
  */
-function PreviewArt({ tone = "dark"}) {
+function PreviewArt({ tone = "dark" }) {
   const isDark = tone === "dark"
   return (
     <div
@@ -44,7 +44,7 @@ function PreviewArt({ tone = "dark"}) {
   )
 }
 
-export function ProjectCard({ project, inverse = "false" }) {
+export function ProjectCard({ project, inverse = false }) {
   return (
     <article className="group">
       <Link to={`/work/${project.slug}`} className="block">
