@@ -42,7 +42,7 @@ export default function ProjectDetail() {
           <p className="mt-4 max-w-xl text-cream/60">{project.description}</p>
 
           {/* Cover preview */}
-          <div className="mt-10 aspect-16/7 overflow-hidden rounded-2xl border border-gold/15 bg-linear-to-br from-gold/10 via-forest-soft to-forest-soft">
+          <div className="mt-10 aspect-video overflow-hidden rounded-2xl border border-gold/15 bg-linear-to-br from-gold/10 via-forest-soft to-forest-soft">
             {project.image && (
               <img
                 src={project.image}
