@@ -32,6 +32,22 @@ export const projects = [
     },
   },
   {
+    slug: "cosmos-explorer",
+    image: "/images/Cosmos-Explorer-screenshot.png",
+    category: "Full Stack",
+    title: "Cosmos Explorer",
+    description: "Space is complicated — exploring it doesn't have to be. A discovery app for astronomy picture of the day, near-earth objects, and NASA's image library.",
+    stack: ["React", "Flask", "PostgreSQL", "SQLAlchemy", "TailwindCSS"],
+    status: "In Progress",
+    link: "https://cosmos-explorer-eight.vercel.app/",
+    repo: "https://github.com/DalzWrld/cosmos-explorer",
+    details: {
+      challenge: "Space and astronomy data is abundant but scattered and hard to casually explore — most sources are either too technical or too shallow.",
+      approach: "Layered React components over custom hooks and a dedicated API service layer, pulling from NASA's APOD and Near-Earth Object APIs, then added a Flask + PostgreSQL backend so users can save discoveries into their own named collections.",
+      outcome: "A full stack app covering the whole loop — frontend consumption of a public API, then a self-built backend with authenticated, user-owned CRUD.",
+    },
+  },
+  {
     slug: "plantsy",
     image: "/images/Plantsy-screenshot.png",
     category: "Frontend",
@@ -46,22 +62,6 @@ export const projects = [
       approach:
         "Use reusable product cards, filtering patterns and clear hierarchy to keep browsing effortless.",
       outcome: "A polished frontend project demonstrating component composition and responsive design.",
-    },
-  },
-  {
-    slug: "cosmos-explorer",
-    image: "/images/Cosmos-Explorer-screenshot.png",
-    category: "Full Stack",
-    title: "Cosmos Explorer",
-    description: "Space is complicated — exploring it doesn't have to be. A discovery app for astronomy picture of the day, near-earth objects, and NASA's image library.",
-    stack: ["React", "Flask", "PostgreSQL", "SQLAlchemy", "TailwindCSS"],
-    status: "In Progress",
-    link: "https://cosmos-explorer-eight.vercel.app/",
-    repo: "https://github.com/DalzWrld/cosmos-explorer",
-    details: {
-      challenge: "Space and astronomy data is abundant but scattered and hard to casually explore — most sources are either too technical or too shallow.",
-      approach: "Layered React components over custom hooks and a dedicated API service layer, pulling from NASA's APOD and Near-Earth Object APIs, then added a Flask + PostgreSQL backend so users can save discoveries into their own named collections.",
-      outcome: "A full stack app covering the whole loop — frontend consumption of a public API, then a self-built backend with authenticated, user-owned CRUD.",
     },
   },
   {
