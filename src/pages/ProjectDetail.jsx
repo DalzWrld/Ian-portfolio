@@ -41,8 +41,16 @@ export default function ProjectDetail() {
           <h1 className="mt-4 font-display text-4xl leading-tight sm:text-5xl">{project.title}</h1>
           <p className="mt-4 max-w-xl text-cream/60">{project.description}</p>
 
-          {/* Cover preview placeholder — swap for a real screenshot */}
-          <div className="mt-10 aspect-16/7 rounded-2xl border border-gold/15 bg-linear-to-br from-gold/10 via-forest-soft to-forest-soft" />
+          {/* Cover preview */}
+          <div className="mt-10 aspect-16/7 overflow-hidden rounded-2xl border border-gold/15 bg-linear-to-br from-gold/10 via-forest-soft to-forest-soft">
+            {project.image && (
+              <img
+                src={project.image}
+                alt={`${project.title} preview`}
+                className="h-full w-full object-cover object-top"
+              />
+            )}
+          </div>
         </div>
       </section>
 
