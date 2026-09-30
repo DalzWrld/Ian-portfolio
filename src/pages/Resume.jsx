@@ -74,46 +74,60 @@ export default function Resume() {
       </section>
 
       {/* WORK HISTORY */}
-      <section className="bg-forest px-6 py-24 text-cream">
-        <div className="mx-auto max-w-6xl px-6">
-          <Reveal>
-            <SectionHeading number="03" label="Work History" inverse />
-            <h2 className="font-display text-3xl leading-snug sm:text-4xl">
-              Where I've <em className="italic text-gold">put it to use.</em>
-            </h2>
-            <p className="mt-4 max-w-xl text-cream/60">
-              Below you'll find a summary of my experience so far.{" "}
-              <span className="no-print">
-                You can also{" "}
-                <button onClick={() => window.print()} className="underline text-gold hover:text-gold-soft">
-                  download my resume
-                </button>
-                .
-              </span>
-            </p>
+        <section className="bg-forest px-6 py-24 text-cream">
+          <div className="mx-auto max-w-6xl px-6">
+            <Reveal>
+              <SectionHeading number="03" label="Work History" inverse />
+              <h2 className="font-display text-3xl leading-snug sm:text-4xl">
+                Where I've <em className="italic text-gold">put it to use.</em>
+              </h2>
 
-            <ol className="mt-12 space-y-10 border-l border-cream/15 pl-8">
-              {workHistory.map((job) => (
-                <li key={`${job.role}-${job.company}`} className="relative">
-                  <span className="absolute -left-9.25 top-1.5 size-2.5 rounded-full bg-gold" />
-                  <h3 className="font-display text-2xl font-semibold text-cream">{job.role}</h3>
-                  <p className="mt-1 text-sm font-medium text-cream/55">
-                    {job.company} · {job.location} · {job.type}
+              {workHistory.length > 0 ? (
+                <>
+                  <p className="mt-4 max-w-xl text-cream/60">
+                    Below you'll find a summary of my experience so far.{" "}
+                    <span className="no-print">
+                      You can also{" "}
+                      <button onClick={() => window.print()} className="underline text-gold hover:text-gold-soft">
+                        download my resume
+                      </button>
+                      .
+                    </span>
                   </p>
-                  <p className="mt-1 text-xs uppercase tracking-widest text-cream/40">{job.period}</p>
-                  <ul className="mt-3 space-y-1.5 text-sm text-cream/70">
-                    {job.points.map((point) => (
-                      <li key={point} className="flex gap-2">
-                        <span className="text-gold">–</span> {point}
+
+                  <ol className="mt-12 space-y-10 border-l border-cream/15 pl-8">
+                    {workHistory.map((job) => (
+                      <li key={`${job.role}-${job.company}`} className="relative">
+                        <span className="absolute -left-9.25 top-1.5 size-2.5 rounded-full bg-gold" />
+                        <h3 className="font-display text-2xl font-semibold text-cream">{job.role}</h3>
+                        <p className="mt-1 text-sm font-medium text-cream/55">
+                          {job.company} · {job.location} · {job.type}
+                        </p>
+                        <p className="mt-1 text-xs uppercase tracking-widest text-cream/40">{job.period}</p>
+                        <ul className="mt-3 space-y-1.5 text-sm text-cream/70">
+                          {job.points.map((point) => (
+                            <li key={point} className="flex gap-2">
+                              <span className="text-gold">–</span> {point}
+                            </li>
+                          ))}
+                        </ul>
                       </li>
                     ))}
-                  </ul>
-                </li>
-              ))}
-            </ol>
-          </Reveal>
-        </div>
-      </section>
+                  </ol>
+                </>
+              ) : (
+                <p className="mt-4 max-w-xl text-cream/60">
+                  I don't have formal work experience yet — I'm early in my Software Engineering journey and have been
+                  focused on building real projects instead. Take a look at my{" "}
+                  <Link to="/work" className="underline text-gold hover:text-gold-soft">
+                    work
+                  </Link>{" "}
+                  to see what I've built so far.
+                </p>
+              )}
+            </Reveal>
+          </div>
+        </section>
     </div>
   )
 }

@@ -181,19 +181,7 @@ export const principles = [
   { title: "Craft", description: "Small details matter, especially when they compound across a product." },
 ]
 
-export const workHistory = [
-  {
-    role: "Full Stack Web Development",
-    company: "Moringa School",
-    location: "Nairobi, Kenya",
-    type: "Education",
-    period: "March 2026 — Present",
-    points: [
-      "Training in HTML, CSS, JavaScript, React, Python, Flask and SQL.",
-      "Built projects including WanderList, Questly and Plantsy.",
-    ],
-  },
-]
+export const workHistory = []
 
 export const education = [
   {
