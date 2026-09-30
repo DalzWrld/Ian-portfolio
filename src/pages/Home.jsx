@@ -26,7 +26,7 @@ export default function Home() {
               I build digital <em className="italic text-gold">experiences</em> that make an impact.
             </h1>
             <p className="mt-6 max-w-md text-cream/65">
-              I'm a Frontend Developer and UI/UX Designer who's passionate about building clean, user-friendly and
+              I'm a Full-Stack Web Developer and UI/UX Designer who's passionate about building clean, user-friendly and
               purposeful web experiences. I turn ideas into elegant solutions.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
