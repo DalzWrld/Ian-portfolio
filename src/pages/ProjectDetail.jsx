@@ -91,7 +91,7 @@ export default function ProjectDetail() {
 
             <div className="mt-10 flex flex-wrap gap-3">
               <Button asChild>
-                <a href={project.link} onClick={(e) => project.link === "#" && e.preventDefault()}>
+                <a href={project.link} onClick={(e) => project.link === "#" && e.preventDefault()} target="_blank" rel="noopener">
                   Live demo <ArrowUpRight size={16} />
                 </a>
               </Button>
