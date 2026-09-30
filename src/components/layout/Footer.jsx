@@ -10,7 +10,7 @@ export function Footer() {
                     <div>
                         <div className="font-decorative text-2xl text-gold">IWN.</div>
                         <p className="mt-4 max-w-sm text-sm leading-6 text-cream/60">
-                            Frontend developer and UI/UX designer building clean, useful digital experiences — one project at a
+                            Full-Stack web developer and UI/UX designer building clean, useful digital experiences — one project at a
                             time.
                         </p>
                         </div>
