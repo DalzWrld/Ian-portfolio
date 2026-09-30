@@ -149,7 +149,7 @@ export const whatIDo = [
     description: "Designing clean, intuitive interfaces that provide meaningful experiences.",
   },
   {
-    title: "Frontend Development",
+    title: "Full-Stack Web Development",
     description: "Building responsive, accessible and performant web applications.",
   },
   {
