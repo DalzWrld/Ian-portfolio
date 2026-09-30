@@ -9,6 +9,7 @@ export function notifyProjectAdded(title) {
 
 export function notifyProjectUpdated(title) {
   toast(`"${title}" updated`, {
+    icon: "✏️",
     description: "Your changes have been saved.",
     className: "!bg-amber-50 !border-amber-300 !text-amber-900",
   })
