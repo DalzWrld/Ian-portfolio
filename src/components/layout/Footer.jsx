@@ -27,7 +27,7 @@ export function Footer() {
                     <div>
                         <p className="eyebrow text-gold">Let's connect</p>
                         <a
-                          href="mailto:hello@ian.dev"
+                          href="mailto:waithakaian49@gmail.com"
                           className="mt-4 flex items-center justify-between border-b border-cream/15 pb-3 text-sm text-cream/80 hover:text-gold"
                         >
                           waithakaian49@gmail.com <ArrowUpRight size={14} />
