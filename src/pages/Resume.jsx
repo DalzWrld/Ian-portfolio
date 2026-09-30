@@ -5,6 +5,7 @@ import { Separator } from "@/components/ui/separator"
 import { SectionHeading } from "@/components/layout/SectionHeading"
 import { Reveal } from "@/components/Reveal"
 import { skills, education, workHistory } from "@/data/content"
+import { Link } from "react-router-dom"
 
 export default function Resume() {
   return (
