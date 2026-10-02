@@ -28,7 +28,7 @@ export default function About() {
             I'm learning to turn <em className="italic text-gold">curiosity</em> into useful software.
           </h1>
           <p className="mt-6 max-w-xl text-cream/60">
-            I'm a Kenyan developer with a background that took a few scenic detours before arriving at technology.
+            I'm a Kenyan web developer with a background that took a few scenic detours before arriving at technology.
             Today, I'm focused on frontend development, UI/UX, and growing into full stack engineering.
           </p>
         </div>
