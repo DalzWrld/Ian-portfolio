@@ -44,11 +44,11 @@ export default function Home() {
           </div>
 
           <div className="relative mx-auto aspect-4/5 w-full max-w-sm overflow-hidden rounded-2xl border border-cream/10 bg-forest-soft">
-            <div className="flex h-full items-center justify-center p-6 text-center text-sm text-cream/50">
-              Add your photo here
-              <br />
-              (recommended: 800×1000px)
-            </div>
+            <img
+              src="/images/A5D0BE1C-0A3C-47B9-9786-2F380F82F713.JPG"
+              alt="Hero image"
+              className="h-full w-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
