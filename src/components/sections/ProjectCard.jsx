@@ -2,6 +2,7 @@ import { ArrowUpRight } from "lucide-react"
 import { Link } from "react-router-dom"
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
+import { ProjectThumbnail } from "@/components/sections/ProjectThumbnail"
 
 /**
  * A lightweight, CSS-drawn "browser window" mockup standing in for a
@@ -48,17 +49,7 @@ export function ProjectCard({ project, inverse = false }) {
   return (
     <article className="group">
       <Link to={`/work/${project.slug}`} className="block">
-        {project.image ? (
-          <div className="aspect-16/10 overflow-hidden rounded-xl border border-current/10">
-            <img
-              src={project.image}
-              alt={`${project.title} preview`}
-              className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            />
-          </div>
-        ) : (
-          <PreviewArt tone={inverse ? "dark" : "light"} />
-        )}
+        <ProjectThumbnail project={project} inverse={inverse} />
         <div className="mt-5 flex items-start justify-between gap-4">
           <div>
             <Badge className={inverse ? "border-gold/40 text-gold" : undefined}>{project.category}</Badge>
