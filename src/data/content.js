@@ -66,13 +66,13 @@ export const projects = [
   },
   {
     slug: "wordly",
-    image: "",
+    image: "/images/Wordly-screenshot.jpg",
     category: "Frontend",
     title: "Wordly",
     description: "A simple dictionary lookup tool — search any word to get its definitions, phonetics and usage, pulled live from a public dictionary API.",
     stack: ["JavaScript", "HTML5", "CSS3", "Fetch API"],
     status: "Completed",
-    link: "",
+    link: "https://wordly-dictionary-api-js.vercel.app/",
     repo: "https://github.com/DalzWrld/wordly-dictionary-api-js",
     details: {
       challenge: "Practice consuming a real external API and rendering its response cleanly, without a framework to lean on.",
@@ -170,8 +170,8 @@ export const testimonials = [
   {
     quote:
       "Iann was a pleasure to work with. He's dedicated, communicates well, and delivers quality work on time. I'd definitely work with him again.",
-    name: "Client Name",
-    role: "Founder, Company",
+    name: "Penzi Mbuthia",
+    role: "Teammate on Questly capstone project",
   },
 ]
 
