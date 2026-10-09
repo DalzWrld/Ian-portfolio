@@ -170,8 +170,8 @@ export const testimonials = [
   {
     quote:
       "Iann was a pleasure to work with. He's dedicated, communicates well, and delivers quality work on time. I'd definitely work with him again.",
-    name: "Client Name",
-    role: "Founder, Company",
+    name: "Penzi Mbuthia",
+    role: "Teammate on Questly capstone project",
   },
 ]
 
