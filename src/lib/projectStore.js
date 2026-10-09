@@ -2,11 +2,13 @@ import { projects as defaultProjects } from "@/data/content"
 import { useEffect, useState } from "react"
 
 const STORAGE_KEY = "iann-portfolio:projects"
+const STORAGE_VERSION = "2" // bump this whenever content.js changes
 
 function readStore() {
   try {
     const raw = window.localStorage.getItem(STORAGE_KEY)
-    if (!raw) return defaultProjects
+    const version = window.localStorage.getItem(STORAGE_KEY + ":version")
+    if (!raw || version !== STORAGE_VERSION) return defaultProjects
     const parsed = JSON.parse(raw)
     return Array.isArray(parsed) && parsed.length > 0 ? parsed : defaultProjects
   } catch {
@@ -16,6 +18,7 @@ function readStore() {
 
 function writeStore(projects) {
   window.localStorage.setItem(STORAGE_KEY, JSON.stringify(projects))
+  window.localStorage.setItem(STORAGE_KEY + ":version", STORAGE_VERSION)
 }
 
 export function getProjects() {
