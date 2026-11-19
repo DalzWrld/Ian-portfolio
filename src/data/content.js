@@ -244,7 +244,7 @@ export const resumeProjects = [
 
 export const education = [
   {
-    degree: "Full Stack Software Engineering",
+    degree: "Certificate in Software Engineering",
     institution: "Moringa School",
     location: "Nairobi, Kenya",
     period: "March 2026 — Present",
