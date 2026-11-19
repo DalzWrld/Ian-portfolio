@@ -60,7 +60,7 @@ export default function Resume() {
             <ol className="mt-12 space-y-10 border-l border-cream/15 pl-8">
               {resumeProjects.map((project) => (
                 <li key={project.title} className="relative">
-                  <span className="absolute -left-[calc(2rem+5px)] top-1.5 size-2.5 rounded-full bg-gold" />
+                  <span className="absolute -left-9.25 top-1.5 size-2.5 rounded-full bg-gold" />
                   <h3 className="font-display text-2xl font-semibold text-cream">{project.title}</h3>
                   <p className="mt-1 text-sm font-medium text-cream/55">
                     {project.type} · {project.stack.join(", ")}
@@ -91,7 +91,7 @@ export default function Resume() {
             <ol className="mt-12 space-y-10 border-l border-ink/15 pl-8">
               {education.map((item) => (
                 <li key={`${item.degree}-${item.institution}`} className="relative">
-                  <span className="absolute -left-[calc(2rem+5px)] top-1.5 size-2.5 rounded-full bg-gold" />
+                  <span className="absolute -left-9.25 top-1.5 size-2.5 rounded-full bg-gold" />
                   <h3 className="font-display text-2xl font-semibold text-ink">{item.degree}</h3>
                   <p className="mt-1 text-sm font-medium text-ink/55">
                     {item.institution} · {item.location}
@@ -117,7 +117,7 @@ export default function Resume() {
               <ol className="mt-12 space-y-10 border-l border-cream/15 pl-8">
                 {workHistory.map((job) => (
                   <li key={`${job.role}-${job.company}`} className="relative">
-                    <span className="absolute -left-[calc(2rem+5px)] top-1.5 size-2.5 rounded-full bg-gold" />
+                    <span className="absolute -left-9.25 top-1.5 size-2.5 rounded-full bg-gold" />
                     <h3 className="font-display text-2xl font-semibold text-cream">{job.role}</h3>
                     <p className="mt-1 text-sm font-medium text-cream/55">
                       {job.company} · {job.location} · {job.type}
