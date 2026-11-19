@@ -183,17 +183,76 @@ export const principles = [
 
 export const workHistory = []
 
+export const resumeSummary =
+  "Full Stack Web Developer in training at Moringa School, transitioning into software engineering from a BSc in Food Science & Technology. Hands-on with JavaScript, React, Python/Flask and SQL, with a focus on frontend craft and UI/UX, building user-focused web applications through both team and solo projects."
+
+export const skillGroups = [
+  {
+    label: "Frontend",
+    items: ["HTML5", "CSS3", "JavaScript", "React", "TailwindCSS", "shadcn/ui"],
+  },
+  {
+    label: "Backend",
+    items: ["Python", "Flask", "SQL", "SQLAlchemy", "PostgreSQL", "REST APIs", "API Integration"],
+  },
+  {
+    label: "Tools & Soft Skills",
+    items: ["Git", "GitHub", "Figma", "Vitest", "pytest", "Team Collaboration", "Problem Solving"],
+  },
+]
+
+export const resumeProjects = [
+  {
+    title: "Questly — Crowdsourced Learning Platform",
+    type: "Team capstone (5 people)",
+    stack: ["React", "TailwindCSS", "Flask", "SQLAlchemy", "SQLite"],
+    points: [
+      "Served as Scrum Master, dividing frontend and backend work fairly across a five-person team.",
+      "Owned core app setup, JWT authentication and routing on both the frontend and backend.",
+      "Contributed to a gamified learning platform with distinct Learner, Contributor and Admin roles.",
+    ],
+  },
+  {
+    title: "Cosmos Explorer",
+    type: "Solo project",
+    stack: ["React", "Flask", "PostgreSQL", "SQLAlchemy", "TailwindCSS"],
+    points: [
+      "Built a space discovery app consuming NASA's APOD and Near-Earth Object APIs through a dedicated service layer and custom React hooks.",
+      "Added a Flask and PostgreSQL backend with full CRUD so users can save discoveries into named collections.",
+      "Migrated the APOD integration to NASA's replacement endpoint after the legacy one was retired.",
+    ],
+  },
+  {
+    title: "WanderList",
+    type: "Team project (4 people)",
+    stack: ["React", "React Router", "JSON Server", "TailwindCSS"],
+    points: [
+      "Collaborated on a travel wishlist app with full CRUD against a JSON Server API.",
+      "Responsible for styling, the db.json data structure and client-side routing.",
+    ],
+  },
+  {
+    title: "CookIt",
+    type: "Solo project",
+    stack: ["React", "TailwindCSS", "shadcn/ui", "JSON Server", "Vitest"],
+    points: [
+      "Built a recipe discovery app on a reusable shadcn/ui component system, deployed on Vercel.",
+      "Wrote component tests with Vitest and React Testing Library.",
+    ],
+  },
+]
+
 export const education = [
+  {
+    degree: "Certificate in Software Engineering",
+    institution: "Moringa School",
+    location: "Nairobi, Kenya",
+    period: "March 2026 — Present",
+  },
   {
     degree: "BSc Food Science & Technology",
     institution: "University of Nairobi",
     location: "Nairobi, Kenya",
     period: "September 2021 — September 2025",
-  },
-  {
-    degree: "Full Stack Software Engineering",
-    institution: "Moringa School",
-    location: "Nairobi, Kenya",
-    period: "March 2026 — Present",
   },
 ]
